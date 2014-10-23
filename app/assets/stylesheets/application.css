@@ -3,9 +3,13 @@
  *= require_self
  */
 
- copy-heading, span.copy-heading {
+.copy-heading span.copy-heading {
   font-family: 'Nunito', sans-serif;
   color: #4f5559;
+}
+
+.left-padding {
+  padding-left: 155px;
 }
 
 span.copy-heading-18{

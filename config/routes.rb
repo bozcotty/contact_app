@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
-  root 'users#index'
-
-  get 'messages/contact_page'
+  resources :messages, only: [:new, :create] #for contact us page
+  root 'messages#new'
 end
