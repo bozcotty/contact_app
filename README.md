@@ -68,7 +68,7 @@ class SendEmailJob < ActiveJob::Base
 end
 ```
 
-- Finally - lets queue the job. Go to the messages controller and modify the create method to look like so:
+- Finally - lets queue this as a background job. Go to the messages controller and modify the create method to look like so:
 ```
 def create
     @message = Message.new(message_params)
