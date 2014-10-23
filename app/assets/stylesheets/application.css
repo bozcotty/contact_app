@@ -1,15 +1,31 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+
+ copy-heading, span.copy-heading {
+  font-family: 'Nunito', sans-serif;
+  color: #4f5559;
+}
+
+span.copy-heading-18{
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+
+p.font16, div.font16 {
+  font-size:16px;
+  color: #4f5559;
+}
+
+/*------Contact Us form-------*/
+
+.contact-capsule {
+  width: 500px;
+  height: 600px;
+  padding: 10px 20px 20px 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  border: 1px solid #428bca;
+  }
+
