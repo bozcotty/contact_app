@@ -8,10 +8,10 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      MessageMailer.new_message(@message).deliver
-      redirect_to root_url, notice: 'Message was successfully sent.'
+      SendEmailJob.new.perform(@message)
+      redirect_to root_url, notice: 'We have received your message and will respond shortly!'
     else
-      render :new, notice: "There was a problem.Please try sending your message again."
+      render :new, notice: "There was a problem.Please try re-sending your message."
     end
   end
 
