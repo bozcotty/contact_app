@@ -1,6 +1,6 @@
 (function() {
   var app = angular.module('NotesApp');
-  app.controller('UsersCtrl', ['$scope', '$http', '$cookies', function($scope, $http, $cookies) {
+  app.controller('UsersCtrl', ['$scope', '$http', '$cookies', '$location', function($scope, $http, $cookies) {
     $scope.create = function(user) {
       $http({
         method: 'POST',
