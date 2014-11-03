@@ -1,0 +1,22 @@
+<%= form_for(@spaceship) do |f| %>
+  <% if @spaceship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spaceship.errors.count, "error") %> prohibited this spaceship from being saved:</h2>
+
+      <ul>
+      <% @spaceship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.label :name, "Ship Name" %>
+    <%= f.text_field :name %><br>
+    <%= f.label :ship_type, "Type of Ship" %>
+    <%= f.text_field :ship_type %><br>
+
+    <%= f.submit %>
+  </div>
+<% end %>
